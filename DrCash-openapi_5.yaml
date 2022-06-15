@@ -1,0 +1,240 @@
+﻿openapi: "3.0.3"
+info:
+  title: "DrCash API"
+  description: "DrCash API"
+  version: "1.0.0"
+servers:
+  - url: "https://DrCash"
+paths:
+  /api/v1/clinics:
+    get:
+      summary: "GET api/v1/clinics"
+      parameters:
+        - name: "queryParameters"
+          in: "query"
+        - name: "filters"
+          in: "query"
+      responses:
+        "200":
+          description: "OK"
+  /api/v1/clinics/BlockClinic:
+    put:
+      summary: "PUT api/v1/clinics/BlockClinic"
+      responses:
+        "200":
+          description: "OK"
+  /api/v1/clinics/UnlockClinic/{clinicId}:
+    put:
+      summary: "PUT api/v1/clinics/UnlockClinic/{clinicId}"
+      parameters:
+        - name: "clinicId"
+          in: "path"
+      responses:
+        "200":
+          description: "OK"
+  /api/v1/clinics/UpdateClinicAddressLatAndLng:
+    put:
+      summary: "PUT api/v1/clinics/UpdateClinicAddressLatAndLng"
+      responses:
+        "200":
+          description: "OK"
+  /api/v1/clinics/clinics-codes:
+    get:
+      summary: "GET api/v1/clinics/clinics-codes"
+      responses:
+        "200":
+          description: "OK"
+  /api/v1/clinics/flags:
+    get:
+      summary: "GET api/v1/clinics/flags"
+      responses:
+        "200":
+          description: "OK"
+  /api/v1/clinics/public:
+    get:
+      summary: "GET api/v1/clinics/public"
+      parameters:
+        - name: "queryParameters"
+          in: "query"
+        - name: "filtersQuery"
+          in: "query"
+      responses:
+        "200":
+          description: "OK"
+  /api/v1/clinics/register/clinic-employees:
+    post:
+      summary: "POST api/v1/clinics/register/clinic-employees"
+      responses:
+        "200":
+          description: "OK"
+  /api/v1/clinics/register/clinic-manager:
+    post:
+      summary: "POST api/v1/clinics/register/clinic-manager"
+      responses:
+        "200":
+          description: "OK"
+  /api/v1/clinics/register/clinic-partner:
+    post:
+      summary: "POST api/v1/clinics/register/clinic-partner"
+      responses:
+        "200":
+          description: "OK"
+  /api/v1/clinics/register/network-admins:
+    post:
+      summary: "POST api/v1/clinics/register/network-admins"
+      responses:
+        "200":
+          description: "OK"
+  /api/v1/clinics/transfer-clinics:
+    put:
+      summary: "PUT api/v1/clinics/transfer-clinics"
+      responses:
+        "200":
+          description: "OK"
+  /api/v1/clinics/transfer-employee:
+    put:
+      summary: "PUT api/v1/clinics/transfer-employee"
+      responses:
+        "200":
+          description: "OK"
+  /api/v1/clinics/types:
+    get:
+      summary: "GET api/v1/clinics/types"
+      responses:
+        "200":
+          description: "OK"
+    post:
+      summary: "POST api/v1/clinics/types"
+      responses:
+        "200":
+          description: "OK"
+  /api/v1/clinics/update-clinics-flags-from-excel:
+    put:
+      summary: "PUT api/v1/clinics/update-clinics-flags-from-excel"
+      responses:
+        "200":
+          description: "OK"
+  /api/v1/clinics/update-clinics-operation-rate-from-excel:
+    put:
+      summary: "PUT api/v1/clinics/update-clinics-operation-rate-from-excel"
+      responses:
+        "200":
+          description: "OK"
+  /api/v1/clinics/{clinicId}:
+    get:
+      summary: "GET api/v1/clinics/{clinicId}"
+      parameters:
+        - name: "clinicId"
+          in: "path"
+      responses:
+        "200":
+          description: "OK"
+    put:
+      summary: "PUT api/v1/clinics/{clinicId}"
+      parameters:
+        - name: "clinicId"
+          in: "path"
+      responses:
+        "200":
+          description: "OK"
+    patch:
+      summary: "PATCH api/v1/clinics/{clinicId}"
+      parameters:
+        - name: "clinicId"
+          in: "path"
+      responses:
+        "200":
+          description: "OK"
+    delete:
+      summary: "DELETE api/v1/clinics/{clinicId}"
+      parameters:
+        - name: "clinicId"
+          in: "path"
+      responses:
+        "200":
+          description: "OK"
+  /api/v1/clinics/{clinicId}/business-partners:
+    get:
+      summary: "GET api/v1/clinics/{clinicId}/business-partners"
+      parameters:
+        - name: "clinicId"
+          in: "path"
+        - name: "queryParameters"
+          in: "query"
+      responses:
+        "200":
+          description: "OK"
+  /api/v1/clinics/{clinicId}/employees:
+    get:
+      summary: "GET api/v1/clinics/{clinicId}/employees"
+      parameters:
+        - name: "clinicId"
+          in: "path"
+        - name: "queryParameters"
+          in: "query"
+      responses:
+        "200":
+          description: "OK"
+  /api/v1/clinics/{clinicId}/isPrivacy-Policy-Accepted:
+    patch:
+      summary: "PATCH api/v1/clinics/{clinicId}/isPrivacy-Policy-Accepted"
+      parameters:
+        - name: "clinicId"
+          in: "path"
+      responses:
+        "200":
+          description: "OK"
+  /api/v1/clinics/{clinicId}/managers/{managerId}:
+    post:
+      summary: "POST api/v1/clinics/{clinicId}/managers/{managerId}"
+      parameters:
+        - name: "clinicId"
+          in: "path"
+        - name: "managerId"
+          in: "path"
+      responses:
+        "200":
+          description: "OK"
+  /api/v1/clinics/{clinicId}/public:
+    get:
+      summary: "GET api/v1/clinics/{clinicId}/public"
+      parameters:
+        - name: "clinicId"
+          in: "path"
+      responses:
+        "200":
+          description: "OK"
+  /api/v1/networks/{networkId}/clinics:
+    get:
+      summary: "GET api/v1/networks/{networkId}/clinics"
+      parameters:
+        - name: "networkId"
+          in: "path"
+        - name: "queryParameters"
+          in: "query"
+        - name: "filters"
+          in: "query"
+      responses:
+        "200":
+          description: "OK"
+    post:
+      summary: "POST api/v1/networks/{networkId}/clinics"
+      parameters:
+        - name: "networkId"
+          in: "path"
+      responses:
+        "200":
+          description: "OK"
+  /api/v1/users/{userId}/clinics:
+    get:
+      summary: "GET api/v1/users/{userId}/clinics"
+      parameters:
+        - name: "userId"
+          in: "path"
+        - name: "queryParameters"
+          in: "query"
+        - name: "filters"
+          in: "query"
+      responses:
+        "200":
+          description: "OK"
